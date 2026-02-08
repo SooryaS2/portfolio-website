@@ -105,13 +105,68 @@
 
 /* Responsiveness */
 @media (max-width: 1024px) {
-    /* 
-       For simpler mobile logic without rewriting the whole JS:
-       We can just let it be a scrollable flex container or similar.
-       Or stick to the JS logic but showing 1 item per page.
-    */
-    /* Currently the JS logic assumes itemsPerPage. To make it responsive properly 
-       we would need the window width in JS. 
-       For now, let's handle mobile by stacking or hiding arrows.
-    */
+    .arrowBtn {
+        display: none;
+        /* Hide arrows on tablet/mobile, rely on touch or simple scroll */
+    }
+
+    .carouselContainer {
+        overflow-x: auto;
+        /* Allow native scrolling */
+        justify-content: flex-start;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 1rem;
+        /* Space for scrollbar if any */
+        width: 100%;
+    }
+
+    .window {
+        overflow: visible;
+        width: 100%;
+    }
+
+    .track {
+        width: auto !important;
+        transform: none !important;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .slide {
+        width: 85vw !important;
+        /* Show most of one card */
+        scroll-snap-align: center;
+        flex-shrink: 0;
+    }
+
+    .card {
+        min-height: auto;
+        /* Remove fixed height constraint */
+        padding: 1.5rem;
+    }
+
+    .title {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .description {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        /* Limit text lines */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .heading {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .section {
+        padding: 3rem 1rem;
+        /* Significantly reduced from 4rem */
+    }
 }
