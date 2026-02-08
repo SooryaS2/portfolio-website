@@ -105,41 +105,50 @@
 
 /* Responsiveness */
 @media (max-width: 1024px) {
-    /* Arrows are visible now as per user request */
+    /* Arrows are visible and JS handles 1 item per page */
 
     .carouselContainer {
-        overflow-x: auto;
-        /* Allow native scrolling */
-        justify-content: flex-start;
-        scroll-snap-type: x mandatory;
-        padding-bottom: 1rem;
-        /* Space for scrollbar if any */
+        /* Revert to flex behavior like desktop */
+        overflow: visible;
         width: 100%;
+        padding-bottom: 0;
+        gap: 0.5rem;
+        /* Smaller gap for mobile */
+        justify-content: center;
+        /* Re-center items */
     }
 
     .window {
-        overflow: visible;
         width: 100%;
+        /* Full width */
+        padding: 1rem 0;
     }
 
     .track {
-        width: auto !important;
-        transform: none !important;
+        /* Let JS handle width/transform */
         display: flex;
-        gap: 1rem;
+        gap: 0;
     }
 
     .slide {
-        width: 85vw !important;
-        /* Show most of one card */
-        scroll-snap-align: center;
+        /* Let JS handle width */
         flex-shrink: 0;
+        padding: 0 0.5rem;
+        /* Add spacing between invisible slides */
     }
 
     .card {
         min-height: auto;
-        /* Remove fixed height constraint */
         padding: 1.5rem;
+    }
+
+    .arrowBtn {
+        width: 40px;
+        /* Smaller arrows */
+        height: 40px;
+        min-width: 40px;
+        /* Prevent shrinking */
+        z-index: 20;
     }
 
     .title {
@@ -152,7 +161,6 @@
         margin-bottom: 1rem;
         display: -webkit-box;
         -webkit-line-clamp: 4;
-        /* Limit text lines */
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
@@ -164,6 +172,5 @@
 
     .section {
         padding: 3rem 1rem;
-        /* Significantly reduced from 4rem */
     }
 }
