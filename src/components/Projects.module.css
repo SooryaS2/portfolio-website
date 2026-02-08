@@ -1,0 +1,117 @@
+.section {
+    padding: 8rem 2rem;
+    background: var(--surface);
+    position: relative;
+    z-index: 10;
+    /* Ensure it sits above background elements */
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.heading {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.carouselContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.window {
+    overflow: hidden;
+    width: 100%;
+    padding: 2rem 0;
+    /* Space for hover effects/shadows */
+}
+
+.track {
+    display: flex;
+    height: 100%;
+}
+
+.slide {
+    flex-shrink: 0;
+    /* Width is set inline via JS logic */
+    height: 100%;
+}
+
+.card {
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    /* Ensure consistent height */
+    background: rgba(255, 255, 255, 0.03);
+    /* Fallback */
+}
+
+.title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--foreground);
+}
+
+.description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: rgba(255, 255, 255, 0.07);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    color: var(--accent-glow);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.arrowBtn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--accent);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 20;
+}
+
+.arrowBtn:hover {
+    background: var(--accent);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    /* 
+       For simpler mobile logic without rewriting the whole JS:
+       We can just let it be a scrollable flex container or similar.
+       Or stick to the JS logic but showing 1 item per page.
+    */
+    /* Currently the JS logic assumes itemsPerPage. To make it responsive properly 
+       we would need the window width in JS. 
+       For now, let's handle mobile by stacking or hiding arrows.
+    */
+}
