@@ -149,6 +149,8 @@
         min-width: 40px;
         /* Prevent shrinking */
         z-index: 20;
+        flex-shrink: 0;
+        /* Ensure circular shape */
     }
 
     /* Remove hover effect on mobile to prevent 'stuck' blue state */

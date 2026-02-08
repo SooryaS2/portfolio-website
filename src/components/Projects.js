@@ -69,7 +69,6 @@ export default function Projects() {
     // Calculate translate percentage based on items per page
     // On mobile (1 item), we translate by 100% per index.
     // On desktop (3 items), we translate by 100/3 % per index.
-    const translateValue = currentIndex * (100 / itemsPerPage);
 
 
 
@@ -98,7 +97,7 @@ export default function Projects() {
                     <div className={styles.window}>
                         <motion.div
                             className={styles.track}
-                            animate={{ x: `-${currentIndex * (100 / itemsPerPage)}%` }}
+                            animate={{ x: `-${currentIndex * (100 / projects.length)}%` }}
                             transition={{ type: "spring", stiffness: 300, damping: 30 }}
                             // The width of the track needs to accommodate all items. 
                             // If itemsPerPage is 1, width is 500% (for 5 items).
