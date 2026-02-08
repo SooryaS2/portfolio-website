@@ -151,6 +151,20 @@
         z-index: 20;
     }
 
+    /* Remove hover effect on mobile to prevent 'stuck' blue state */
+    .arrowBtn:hover {
+        background: rgba(255, 255, 255, 0.05);
+        /* Reset to default */
+        color: var(--accent);
+        /* Reset to default */
+        transform: none;
+    }
+
+    .arrowBtn:active {
+        background: var(--accent);
+        color: white;
+    }
+
     .title {
         font-size: 1.3rem;
         margin-bottom: 0.5rem;

@@ -54,17 +54,23 @@ export default function Projects() {
     }, []);
 
     const nextSlide = () => {
-
         setCurrentIndex((prev) =>
-            prev + 1 > projects.length - itemsPerPage ? 0 : prev + 1
+            // If we are at the end, go back to 0. Otherwise just go to next slide.
+            prev === projects.length - 1 ? 0 : prev + 1
         );
     };
 
     const prevSlide = () => {
         setCurrentIndex((prev) =>
-            prev === 0 ? projects.length - itemsPerPage : prev - 1
+            // If we are at 0, go to the last slide. Otherwise go to prev slide.
+            prev === 0 ? projects.length - 1 : prev - 1
         );
     };
+
+    // Calculate translate percentage based on items per page
+    // On mobile (1 item), we translate by 100% per index.
+    // On desktop (3 items), we translate by 100/3 % per index.
+    const translateValue = currentIndex * (100 / itemsPerPage);
 
 
 
@@ -90,6 +96,9 @@ export default function Projects() {
                             className={styles.track}
                             animate={{ x: `-${currentIndex * (100 / itemsPerPage)}%` }}
                             transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                            // The width of the track needs to accommodate all items. 
+                            // If itemsPerPage is 1, width is 500% (for 5 items).
+                            // If itemsPerPage is 3, width is 500/3 %.
                             style={{ width: `${(projects.length / itemsPerPage) * 100}%` }}
                         >
                             {projects.map((project, index) => (
