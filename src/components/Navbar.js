@@ -32,6 +32,15 @@ export default function Navbar() {
         }
     };
 
+    const scrollToTop = (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        closeMenu();
+    };
+
     return (
         <motion.nav
             className={styles.nav}
@@ -40,9 +49,9 @@ export default function Navbar() {
             transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
         >
             <div className={styles.container}>
-                <Link href="/" className={styles.logoItem} onClick={closeMenu}>
+                <a href="#" className={styles.logoItem} onClick={scrollToTop}>
                     <Logo />
-                </Link>
+                </a>
 
                 {/* Desktop Links */}
                 <div className={styles.links}>

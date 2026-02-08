@@ -204,6 +204,12 @@
     .button {
         width: 100%;
         text-align: center;
+        display: flex;
+        /* Added flex */
+        justify-content: center;
+        /* Center horizontally */
+        align-items: center;
+        /* Center vertically */
     }
 
     .socials {
