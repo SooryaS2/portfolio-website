@@ -15,7 +15,7 @@ export default function Navbar() {
             <div className={styles.container}>
                 <Link href="/" className={styles.logoItem}>
                     <Logo />
-                    <span className={styles.logoText}>Soorya</span>
+
                 </Link>
                 <div className={styles.links}>
                     <Link href="#about" className={styles.link}>About</Link>

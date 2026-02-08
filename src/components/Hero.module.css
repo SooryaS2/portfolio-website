@@ -148,6 +148,36 @@
     pointer-events: none;
 }
 
+.socials {
+    display: flex;
+    gap: 2.5rem;
+    /* Increased from 1.5rem to fix 'smushed' look */
+    margin-top: 2.5rem;
+}
+
+.socialIcon {
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    /* Match secondary button style */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    background: transparent;
+}
+
+.socialIcon:hover {
+    color: var(--foreground);
+    border-color: var(--foreground);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+}
+
 @media (max-width: 968px) {
     .container {
         flex-direction: column-reverse;
@@ -156,6 +186,10 @@
     }
 
     .actions {
+        justify-content: center;
+    }
+
+    .socials {
         justify-content: center;
     }
 

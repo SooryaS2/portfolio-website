@@ -3,7 +3,7 @@ import styles from './Hero.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Download } from 'lucide-react';
+import { Download, Github, Linkedin, Instagram } from 'lucide-react';
 
 export default function Hero() {
     return (
@@ -63,6 +63,23 @@ export default function Hero() {
                             <span>Download CV</span>
                             <Download size={18} />
                         </a>
+                    </motion.div>
+
+                    <motion.div
+                        className={styles.socials}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.0, duration: 0.5 }}
+                    >
+                        <Link href="https://github.com/SooryaS2" target="_blank" className={styles.socialIcon}>
+                            <Github size={24} />
+                        </Link>
+                        <Link href="https://www.linkedin.com/in/sooryaselvakumar02/" target="_blank" className={styles.socialIcon}>
+                            <Linkedin size={24} />
+                        </Link>
+                        <Link href="https://www.instagram.com/soorya.selvakumar/" target="_blank" className={styles.socialIcon}>
+                            <Instagram size={24} />
+                        </Link>
                     </motion.div>
                 </motion.div>
 

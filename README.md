@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Portfolio Website
 
-## Getting Started
+Hey! This is my personal portfolio website where I showcase my projects, skills, and experience. I built this to have a cool place to send recruiters and to practice my React/Next.js skills.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+*   **Next.js**: For the framework (honestly, it makes routing so much easier).
+*   **React**: For all the components.
+*   **Framer Motion**: Used this for all the cool animations (like the shooting stars and scrolling effects).
+*   **CSS Modules**: To keep the styling organized and not messy.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features I Added
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1.  **Shooting Stars Background**: I found a way to make these stars shoot across the screen randomly. It looks pretty sick.
+2.  **Project Carousel**: You can scroll through my projects horizontally.
+3.  **Spotlight Cards**: When you hover over the project cards, there's a spotlight effect that follows your mouse.
+4.  **Custom Logo**: I coded my own "S" logo using SVG so it scales perfectly.
+5.  **Scroll Progress**: There's a little bar at the top that shows how far down you've scrolled.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How to Run It
 
-## Learn More
+If you want to run this locally on your machine, just do this:
 
-To learn more about Next.js, take a look at the following resources:
+1.  Clone the repo usually:
+    ```bash
+    git clone https://github.com/SooryaS2/portfolio-website.git
+    ```
+2.  Install the dependencies (node_modules):
+    ```bash
+    npm install
+    ```
+3.  Run the development server:
+    ```bash
+    npm run dev
+    ```
+4.  Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+I deployed this using Vercel because it connects straight to GitHub and updates whenever I push code.
 
-## Deploy on Vercel
+## Future Improvements
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Things I want to add later:
+*   Dark/Light mode toggle (currently it's just dark mode which I like better).
+*   Maybe a blog section if I start writing articles.
+*   Add more animations to the About section.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+Feel free to look around or use this as inspiration for your own portfolio!

@@ -48,7 +48,7 @@ export default function Projects() {
             }
         };
 
-        handleResize(); // Init
+        handleResize(); // check the screen size right away
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);

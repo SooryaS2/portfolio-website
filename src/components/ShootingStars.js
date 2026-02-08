@@ -21,11 +21,11 @@ export default function ShootingStars() {
             star.style.top = `${y}px`;
 
 
-            const duration = Math.random() * 1 + 0.5; // 0.5 to 1.5s
+            const duration = Math.random() * 1 + 0.5; // make some go faster than others
             star.style.animationDuration = `${duration}s`;
 
 
-            const angle = Math.random() * 45 - 22.5 + 45; // 22.5 to 67.5 degrees
+            const angle = Math.random() * 45 - 22.5 + 45; // angle them slightly so they look cool
             star.style.transform = `rotate(${angle}deg)`;
 
             container.appendChild(star);

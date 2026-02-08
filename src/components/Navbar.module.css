@@ -41,6 +41,15 @@
 
 }
 
+.flags {
+    font-size: 1.2rem;
+    /* Slightly adjust if needed, or keep 1.5rem to match text */
+    display: flex;
+    align-items: center;
+    margin-left: 0.5rem;
+    /* Gap between text and flags */
+}
+
 .links {
     display: flex;
     align-items: center;

@@ -36,23 +36,7 @@ export default function Contact() {
                             </Link>
                         </motion.div>
 
-                        <div className={styles.socials}>
-                            <motion.div whileHover={{ y: -5 }} whileTap={{ scale: 0.9 }}>
-                                <Link href="https://github.com/SooryaS2" target="_blank" className={styles.socialIcon}>
-                                    <Github size={24} />
-                                </Link>
-                            </motion.div>
-                            <motion.div whileHover={{ y: -5 }} whileTap={{ scale: 0.9 }}>
-                                <Link href="https://www.linkedin.com/in/sooryaselvakumar02/" target="_blank" className={styles.socialIcon}>
-                                    <Linkedin size={24} />
-                                </Link>
-                            </motion.div>
-                            <motion.div whileHover={{ y: -5 }} whileTap={{ scale: 0.9 }}>
-                                <Link href="https://www.instagram.com/soorya.selvakumar/" target="_blank" className={styles.socialIcon}>
-                                    <Instagram size={24} />
-                                </Link>
-                            </motion.div>
-                        </div>
+
                     </div>
                 </motion.div>
             </div>
