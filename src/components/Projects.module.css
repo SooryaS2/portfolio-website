@@ -165,6 +165,13 @@
         color: white;
     }
 
+    .arrowBtn:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+        pointer-events: none;
+        /* Prevent clicks */
+    }
+
     .title {
         font-size: 1.3rem;
         margin-bottom: 0.5rem;

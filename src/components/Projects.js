@@ -54,16 +54,15 @@ export default function Projects() {
     }, []);
 
     const nextSlide = () => {
-        setCurrentIndex((prev) =>
-            // If we are at the end, go back to 0. Otherwise just go to next slide.
-            prev === projects.length - 1 ? 0 : prev + 1
-        );
+        setCurrentIndex((prev) => {
+            const maxIndex = projects.length - itemsPerPage;
+            return prev < maxIndex ? prev + 1 : prev;
+        });
     };
 
     const prevSlide = () => {
         setCurrentIndex((prev) =>
-            // If we are at 0, go to the last slide. Otherwise go to prev slide.
-            prev === 0 ? projects.length - 1 : prev - 1
+            prev > 0 ? prev - 1 : prev
         );
     };
 
@@ -87,7 +86,12 @@ export default function Projects() {
                 </motion.h2>
 
                 <div className={styles.carouselContainer}>
-                    <button onClick={prevSlide} className={styles.arrowBtn} aria-label="Previous Project">
+                    <button
+                        onClick={prevSlide}
+                        className={styles.arrowBtn}
+                        aria-label="Previous Project"
+                        disabled={currentIndex === 0}
+                    >
                         <ChevronLeft size={32} />
                     </button>
 
@@ -124,7 +128,12 @@ export default function Projects() {
                         </motion.div>
                     </div>
 
-                    <button onClick={nextSlide} className={styles.arrowBtn} aria-label="Next Project">
+                    <button
+                        onClick={nextSlide}
+                        className={styles.arrowBtn}
+                        aria-label="Next Project"
+                        disabled={currentIndex >= projects.length - itemsPerPage}
+                    >
                         <ChevronRight size={32} />
                     </button>
                 </div>
