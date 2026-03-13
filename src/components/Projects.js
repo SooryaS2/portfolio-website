@@ -7,6 +7,21 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const projects = [
     {
+        title: "Omni",
+        description: "AI-powered support pipeline that converts voice notes, screenshots, and multilingual text into prioritized engineering briefs in seconds. Built with a 12-step autonomous triage flow including transcription, classification, deduplication, and auto-escalation for critical incidents.",
+        technologies: ["Next.js", "TypeScript", "Supabase", "Inngest", "Hugging Face"]
+    },
+    {
+        title: "Shadow AI Guardian",
+        description: "Enterprise-grade Chrome extension for monitoring and controlling unauthorized AI usage across teams. Features multi-layer threat detection, group-based policy management, sensitive data interception, and real-time admin audit visibility.",
+        technologies: ["Chrome Extension", "JavaScript", "Manifest V3", "DOM Scanning", "Security Monitoring"]
+    },
+    {
+        title: "Taurgo AI Assist",
+        description: "AI-powered RICS property condition report generator that analyzes uploaded property images and produces structured defect assessments with severity grading. Supports combined analysis, HEIC conversion, and professional PDF exports directly in the browser.",
+        technologies: ["React", "Gemini 2.5 Flash", "Tailwind CSS", "jsPDF", "Vite"]
+    },
+    {
         title: "Kudos App (HackTheDiff)",
         description: "A peer recognition platform enabling users to nominate colleagues for kudos. Features real-time notifications, a dashboard feed, and an admin panel. Built during the Hackthediff hackathon.",
         technologies: ["Next.js", "Supabase", "TypeScript", "Tailwind CSS"]
