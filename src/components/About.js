@@ -15,8 +15,8 @@ export default function About() {
                 <h2 className={styles.heading}>About Me</h2>
                 <div className={styles.content}>
                     <p className={styles.text}>
-                        I am a recent graduate from <strong>Cardiff Metropolitan University</strong> with a degree in BSc (Hons) Computer Science - Artificial Intelligence,
-                        currently pursuing a <strong>MSc Advanced Computer Science</strong> degree at <strong>Cardiff University</strong>.
+                        I am a recent graduate from <strong>Cardiff Metropolitan University</strong> with a degree in <strong>BSc (Hons) Computer Science - Artificial Intelligence</strong>,
+                        who is now pursuing a <strong>MSc Advanced Computer Science</strong> degree at <strong>Cardiff University</strong>. Starting this summer, I will be joining <strong>CME Group</strong> as an <strong>eDiscovery Intern</strong> for the upcoming year.
                     </p>
                     <p className={styles.text}>
                         I am passionate about leveraging technology to solve real-world problems and continually seek opportunities to enhance my skills in programming,

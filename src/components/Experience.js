@@ -19,6 +19,12 @@ const education = [
 
 const experience = [
     {
+        role: "eDiscovery Intern",
+        company: "CME Group",
+        period: "July 2026 - Present",
+        description: "Incoming eDiscovery Intern at CME Group, contributing to electronic discovery processes and leveraging technology to support legal and compliance operations."
+    },
+    {
         role: "Lead School Representative",
         company: "Cardiff School Of Technologies",
         period: "Aug 2024 - June 2025",

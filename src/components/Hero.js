@@ -6,6 +6,9 @@ import { motion } from 'framer-motion';
 import { Download, Github, Linkedin, Instagram } from 'lucide-react';
 
 export default function Hero() {
+    const cvFileName = 'Soorya_Selvakumar_CV.pdf';
+    const cvHref = `/${cvFileName}?v=20260314`;
+
     return (
         <section className={styles.hero} id="home">
             <div className={styles.glow} />
@@ -55,8 +58,8 @@ export default function Hero() {
                         </Link>
 
                         <a
-                            href="/Soorya_Selvakumar_CV.pdf"
-                            download="Soorya_Selvakumar_CV.pdf"
+                            href={cvHref}
+                            download={cvFileName}
                             className={`${styles.button} ${styles.secondary}`}
                             style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}
                         >
