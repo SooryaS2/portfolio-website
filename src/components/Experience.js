@@ -21,7 +21,7 @@ const experience = [
     {
         role: "eDiscovery Intern",
         company: "CME Group",
-        period: "July 2026 - Present",
+        period: "July 2026 - July 2027",
         description: "Incoming eDiscovery Intern at CME Group, contributing to electronic discovery processes and leveraging technology to support legal and compliance operations."
     },
     {
